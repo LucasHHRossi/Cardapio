@@ -1,0 +1,8 @@
+1522885915836	Move 'cadastrar.jsp' to 'WEB-INF'
+1522885920321	Move 'cadastro.jsp' to 'WEB-INF'
+1522885925696	Move 'consultar.jsp' to 'lib'
+1522885934212	Move 'consultar.jsp' to 'WEB-INF'
+1522885939603	Move 'excluir.jsp' to 'WEB-INF'
+1522945144516	Move 'web.xml' to 'lib'
+1522945164681	Move 2 resources to 'lib'
+1522945310570	Delete elements

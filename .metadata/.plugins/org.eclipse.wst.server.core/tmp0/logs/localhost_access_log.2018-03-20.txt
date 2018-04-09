@@ -1,0 +1,2 @@
+127.0.0.1 - - [20/Mar/2018:23:37:06 -0300] "GET / HTTP/1.1" 404 1073
+0:0:0:0:0:0:0:1 - - [20/Mar/2018:23:37:07 -0300] "GET /ProjPecas/WEB-INF/classes/br/com/projpecas/entidade/Cadastro.java HTTP/1.1" 404 1046

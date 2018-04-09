@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+
+<head>
+	<title>Cardapio</title>
+
+	<link rel="stylesheet" type="text/css" href="meuestilo.css">
+
+</head>
+<body>
+
+<div style="padding: 5%"></div>
+	
+
+<h1 style="text-align:center;font-size:350%;" >Cardapio</h1>
+
+
+<center><br><div style="float:left; width:50%"><p style="font-size: 110%;">Massa Carbonara</p>
+</div><div style="float:left; width:50%"><p style="font-size: 110%;">Massa A pultanesca</div></center><br>
+
+
+<center><br><div style="float:left; width:50%"><img src=" carborana.jpg"width="320" height="205"></div><div style="float:left; width:50%"><img src="original.jpg"width="320" height="205"></div></center><br>
+
+
+<center><br><div style="float:left; width:50%"><p style="font-size: 110%;">Ingredientes: Massa à escolha do cliente(Espaguete, Penne,<br/>Talharin e parafuso), Bacon, gema de ovo , <br />
+queijo parmesao e pimenta do reino.<br/>
+Valor: R$ 30,00. Serve duas pessoas.</p>
+</div><div style="float:left; width:50%"><p style="font-size: 110%;">Ingredientes: Massa à escolha do cliente(Espaguete, Penne,<br/>Talharin e parafuso), azeitonas pretas picadas,alcaparras,filé de anchovas, <br />
+tomates e pimentas.<br/>
+Valor: R$ 45,00. Serve duas pessoas.</p></div></center><br>
+
+
+<center><br><div style="float:left; width:50%"><p style="font-size: 110%;">Lasanha com linguiça toscana</p>
+</div><div style="float:left; width:50%"><p style="font-size: 110%;">Massa  ao molho Pesto</div></center><br>
+
+
+<center><br><div style="float:left; width:50%"><img src=" lasa.jpg"width="320" height="205"></div><div style="float:left; width:50%"><img src="pesto-receita.jpg"width="320" height="205"></div></center><br>
+
+
+<center><br><div style="float:left; width:50%"><p style="font-size: 110%;">Ingredientes: , molho de tomate fresco , <br />
+linguica toscana , queijo muçarela e queijo parmesão.<br/>
+Valor: R$ 50,00. Serve duas pessoas.</p>
+</div><div style="float:left; width:50%"><p style="font-size: 110%;">Ingredientes: Massa à escolha do cliente(Espaguete, Penne,<br/>Talharin e parafuso), molho pesto napolitano , folhas de manjericão e <br/> parmesão fresco ralado.<br/>
+Valor: R$ 70,00. Serve duas pessoas.</p></div></center><br>
+
+
+<center><br><div style="float:left; width:50%"><p style="font-size: 110%;">Lsanaha a bolonhesa</p>
+</div><div style="float:left; width:50%"><p style="font-size: 110%;">Massa com Berinjela à seciliano </div></center><br>
+
+
+<center><br><div style="float:left; width:50%"><img src=" lasabo.jpg"width="320" height="205"></div><div style="float:left; width:50%"><img src="sici.jpg"width="320" height="205"></div></center><br>
+
+
+<center><br><div style="float:left; width:50%"><p style="font-size: 110%;">Ingredientes: , molho de tomate fresco , <br />
+carne moida , queijo muçarela e queijo parmesão gratinado.<br/>
+Valor: R$ 55,00. Serve duas pessoas.</p>
+</div><div style="float:left; width:50%"><p style="font-size: 110%;">Ingredientes: Massa à escolha do cliente(Espaguete, Penne,<br/>Talharin e parafuso), molho tomate fresco , berinjela refogada, folhas de manjericão e <br/> parmesão fresco ralado.<br/>
+Valor: R$ 50,00. Serve duas pessoas.</p></div></center><br>
+
+
+<table class="table table-hover table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Telefone</th>
+      <th scope="col">Op��es</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%for (Cadastro cadastro : new CadastroDB().getAll()){%>
+    <tr>
+      <th scope="row"><%=cadastro.getCodigo() %></th>
+      <td><%=cadastro.getNome() %></td>
+      <td><%=cadastro.getTelefone() %></td>
+      <td>  
+      <button class="btn btn-warning" onclick="alterar(<%=cadastro.getCodigo() %>, '<%=cadastro.getNome() %>', '<%=cadastro.getTelefone() %>')">Alterar</button>
+      <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#confexcluir" onclick="salvaCodigo(<%=cadastro.getCodigo() %>)">Excluir</button>
+      </td>
+    </tr>
+    <%}%>
+  </tbody>
+</table>
+
+
+
+
+
+
+
+</body>
+</html>
